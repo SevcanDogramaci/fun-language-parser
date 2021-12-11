@@ -1,0 +1,153 @@
+
+FUN add (INT a, INT b) => INT {:
+	a = a + b:)
+	RETURN a:)
+:}
+
+add(5, 10):) // valid function call 
+add(5, "a"):) // invalid function call - wrong data type error
+add(5, 4, 3):) // invalid function call - num of parameters error
+
+============================================================
+
+// var declarations
+integer_var  => INT:)
+double_var  => DOUBLE:)
+char_val  => CHAR:)
+bool_var  => BOOL:)
+str_var  => STR:)
+
+// var initializations
+integer_var = 2 * 4:)
+double_var = 2.0:)
+char_val = 'c':)
+bool_var = TRUE:) // or FALSE
+str_var = "samPle12_":)
+
+// array declarations
+integer_arr => INT[10]:)
+double_arr => DOUBLE[10]:)
+char_arr => CHAR[10]:)
+bool_arr => BOOL[10]:)
+str_arr => STR[10]:)
+
+integer_arr[0] = 0:)
+integer_arr[1] = 1:)
+
+IF (bool_var  & double_var > 3.0 & integer_var >= 2) {: // false
+	str_arr[0] = "zero":)
+	PRINT(str_arr[0]):)
+	PRINTinteger_arr[0] + integer_arr[1]:)):)
+:}
+ELIF (bool_var) {: // true
+	str_arr[1] = "one":)
+	PRINTstr_arr[1]):)
+:} 
+ELSE {: 
+	str_arr [2] = "two":)
+	PRINTstr_arr[2]):)
+:} 
+
+WHILE ( double_var < 10.0 ) {:
+	t => INT:) // not executed
+:}
+
+
+FUN add (INT a, INT b) => INT {: // redeclaration of function add
+	a = a + b:)
+	RETURN a:)
+:}
+
+===============================================================
+
+x_arr => INT[2] :)
+x_arr[0] = 2 :)
+x_arr[1] = 3 :)
+
+print(x_arr[0] + x_arr[1] = 3 :))
+
+integer_arr => INT[10]:)
+double_var  => DOUBLE:)
+double_arr => DOUBLE[10]:)
+
+new_integer_var = integer_arr[3] :) // definition error
+new_integer_var => INT :)
+new_integer_var = integer_arr[3] :) // initalization error
+new_integer_var[0] = 10:) // array / variable error
+new_integer_var = double_var :) // wrong data type error
+
+IF(double_var) {: // Not a logical statement !
+	PRINT(double_var) :)
+:} 
+ELSE {:
+	new_integer_var = integer_arr[100]:) // wrong index error
+:}
+
+===============================================================
+undefined_fun( 1, "a"):) // "function is not defined" error
+
+IF ( 1 < "sample") // data type error {:
+	PRINT("Inside if"):)
+:}
+IF (TRUE < FALSE) // data type error {:
+	PRINT("Inside if"):)
+:}
+
+===============================================================
+
+str_var => STR :)
+str_var = "Hello" :)
+
+IF(str == "Hello") {: // strings not allowed error
+	PRINT("Hi") :)
+:}
+
+=============================================================
+
+new_integer_var => INT :)
+new_integer_var = 10:) 
+
+IF(TRUE){: // Not a logical statement !
+	denominator => INT :)
+	denominator = new_integer_var - 10 :)
+	PRINT(denominator ):)
+	new_integer_var = new_integer_var / denominator :) // no division by zero
+:} 
+
+============================================================
+
+a => INT:)
+b => INT:)
+
+a = 10:)
+b = a:)
+a = a + b:)
+PRINT(b) :)
+
+a = a / b:)
+PRINT(a) :)
+
+b = a * b:)
+PRINT(b) :)
+
+b = a - b:)
+PRINT(b) :)
+
+============================================================
+
+temperature => INT :)
+temperature = 20 :)
+
+is_bored => BOOL:)
+is_bored = TRUE :)
+
+
+IF(temperature > 25){:
+	PRINT("Too hot for a picnic day!") :)
+:}
+ELIF(temperature > 20 & is_bored) {:
+	PRINT("Today is the picnic day!) :)
+:}
+ELSE{:
+	PRINT("Not suitable for a picnic day!"):)
+:}
